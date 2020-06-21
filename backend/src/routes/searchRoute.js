@@ -15,7 +15,7 @@ router.get('/details/:accountName', async (req,res) => {
     
     var Twitter = new twit(config);
     let params = {
-        q: 'Donald',
+        q: req.params.accountName,
         result_type: 'recent',
         lang: 'en'
     }
